@@ -1,0 +1,13 @@
+<h1>Words#game</h1>
+<p>Find me in app/views/words/game.html.erb</p>
+
+<p><%= @grid %></p>
+<form action="/score">
+  <label for="game"></label>
+  <input type="text" id="game" name="query" placeholder="">
+  <input type="hidden" id="grid" name="grid" value="<%= @grid %>">
+  <input type="hidden" id="start_time" name="st_time" value="<%= Time.now.to_i %>">
+  <input type="submit" value="Go on!">
+</form>
+
+
